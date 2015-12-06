@@ -1,0 +1,9 @@
+init
+status
+add
+diff
+commit
+log
+checkout HEAD filename
+reset HEAD filename
+reset SHA
