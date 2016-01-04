@@ -38,12 +38,14 @@ public class Sorts{
     public static void selectionSort(int[] data){
 	for(int i=0;i<data.length;i++){
 	    int x=data[i];
+	    int y=0;
 	    for(int j=i;j<data.length;j++){
 		if(data[j]<data[i]){
 		    x=data[j];
 		}
+		y=j;
 	    }
-	    data[j]=data[i];
+	    data[y]=data[i];
 	    data[i]=x;
 	}
     }
