@@ -38,19 +38,27 @@ public class Sorts{
     public static void selectionSort(int[] data){
 	for(int i=0;i<data.length;i++){
 	    int x=data[i];
-	    int y=0;
+	    int y=i;
 	    for(int j=i;j<data.length;j++){
-		if(data[j]<data[i]){
+		if(data[j]<x){
 		    x=data[j];
+		    y=j;
 		}
-		y=j;
 	    }
 	    data[y]=data[i];
 	    data[i]=x;
 	}
     }
 
-
+    public static void main(String[]args){
+	int[] nums1=new int[] {9,6,4,7,8,0,2,3,4,4,7,4,5,6};
+	insertionSort(nums1);
+	printArray(nums1);
+	int[] nums2=new int[] {9,6,4,7,8,0,2,3,4,4,7,4,5,6};
+	selectionSort(nums2);
+	printArray(nums2);
+    
+    }
 
 
 
