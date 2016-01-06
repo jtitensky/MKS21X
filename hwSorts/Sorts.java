@@ -23,6 +23,7 @@ public class Sorts{
 		}
 		data[c]=x;
 	    }
+	    printArray(data);
 	}
     }
 
@@ -47,16 +48,38 @@ public class Sorts{
 	    }
 	    data[y]=data[i];
 	    data[i]=x;
+	    printArray(data);
 	}
     }
 
+    public static void bubbleSort(int[] data){
+	boolean o=false;
+	for(int i=data.length;i>0;i--){
+	    if(!o){
+		o=true;
+		for(int j=0;j<i-1;j++){
+		    if (data[j]>data[j+1]){
+			int x=data[j];
+			data[j]=data[j+1];
+			data[j+1]=x;
+			o=false;
+		    }
+		}
+	    }else{
+	    }
+	    printArray(data);
+	}
+    }
+
+
     public static void main(String[]args){
-	int[] nums1=new int[] {9,6,4,7,8,0,2,3,4,4,7,4,5,6};
-	insertionSort(nums1);
-	printArray(nums1);
-	int[] nums2=new int[] {9,6,4,7,8,0,2,3,4,4,7,4,5,6};
-	selectionSort(nums2);
-	printArray(nums2);
+	int[] nums1=new int[] {1,2,9,5,0,3};
+	//insertionSort(nums1);
+	int[] nums2=new int[] {1,2,9,5,0,3};
+	//selectionSort(nums2);
+	int[] nums3=new int[] {1,2,9,5,0,3};
+	bubbleSort(nums3);
+
     
     }
 
