@@ -1,3 +1,4 @@
+import java.lang.Math;
 public class Sorts{
 
     public static void insertionSort(int[]data){
@@ -23,7 +24,7 @@ public class Sorts{
 		}
 		data[c]=x;
 	    }
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
@@ -48,7 +49,7 @@ public class Sorts{
 	    }
 	    data[y]=data[i];
 	    data[i]=x;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
@@ -67,18 +68,29 @@ public class Sorts{
 		}
 	    }else{
 	    }
-	    printArray(data);
+	    //printArray(data);
 	}
     }
 
+    public static void fillRandom(int[] data){
+	for(int i=0;i<data.length;i++){
+	    data[i]=(int)(Math.random()*Integer.MAX_VALUE);
+	}
+    }
+
+    public static void swap(int[] data,int i,int j){
+	int x=data[i];
+	data[i]=data[j];
+	data[j]=x;
+    }
 
     public static void main(String[]args){
 	int[] nums1=new int[] {1,2,9,5,0,3};
-	//insertionSort(nums1);
+	//insertionSort(nums1);//.121
 	int[] nums2=new int[] {1,2,9,5,0,3};
-	//selectionSort(nums2);
+	//selectionSort(nums2);//.076
 	int[] nums3=new int[] {1,2,9,5,0,3};
-	bubbleSort(nums3);
+	//bubbleSort(nums3);//.39
 
     
     }
